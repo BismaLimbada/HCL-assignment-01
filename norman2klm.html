@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KLM Analysis – Medical Syringe</title>
+  <title>KLM Computation – Bisma Ahmed</title>
+  <style>
+    /* Bisma's "Technical Spec" Theme */
+    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
+    
+    /* Monospace for technical terms */
+    .tech-code { font-family: 'Courier New', monospace; font-weight: bold; color: #d63384; }
+    
+    /* Styling for the sequence box */
+    .calc-box { 
+      background-color: #f8f9fa; 
+      border: 1px solid #dee2e6; 
+      padding: 15px; 
+      border-radius: 4px;
+      margin: 20px 0;
+      font-family: 'Courier New', monospace;
+    }
+  </style>
 </head>
 <body>
 
   <header>
     <h1>KLM Performance Prediction</h1>
-    <p>Calculating execution time for safety-critical hardware.</p>
+    <p>Quantitative Analysis of Safety-Critical Hardware (Dix et al.)</p>
   </header>
 
   <nav aria-label="Primary navigation">
@@ -24,53 +41,98 @@
 
   <main>
     <section>
-      <h2>The Seven Primitive Operators</h2>
+      <h2>Standard Operator Set (Dix et al.)</h2>
       <p>
-        In medical device design, the Keystroke-Level Model (KLM) predicts if an expert (like a nurse) 
-        can respond to an alarm fast enough.
+        The Keystroke-Level Model reduces complex nurse-machine interactions into 
+        seven primitive physical and mental units.
       </p>
-      
+
       
 
-      <ul>
-        <li><strong>K:</strong> Pressing a hardware button.</li>
-        <li><strong>B:</strong> Pressing a toggle switch.</li>
-        <li><strong>P:</strong> Reaching for a specific dial.</li>
-        <li><strong>H:</strong> Homing hands between the device and a notepad.</li>
-        <li><strong>D:</strong> Manual drawing/plotting on a chart.</li>
-        <li><strong>M:</strong> Mental preparation before a critical action.</li>
-        <li><strong>R:</strong> Machine calibration time.</li>
-      </ul>
+      <table border="1">
+        <caption>KLM Primitive Operators</caption>
+        <thead>
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Operator Name</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tech-code">K</td>
+            <td>Keystroke</td>
+            <td>Striking a key (e.g., dosage number).</td>
+          </tr>
+          <tr>
+            <td class="tech-code">B</td>
+            <td>Button Press</td>
+            <td>Pressing/releasing a mouse or joystick button.</td>
+          </tr>
+          <tr>
+            <td class="tech-code">P</td>
+            <td>Pointing</td>
+            <td>Moving a cursor to a target on screen.</td>
+          </tr>
+          <tr>
+            <td class="tech-code">H</td>
+            <td>Homing</td>
+            <td>Switching hands between controls (e.g., dial to screen).</td>
+          </tr>
+          <tr>
+            <td class="tech-code">D</td>
+            <td>Drawing</td>
+            <td>Tracing a path on a grid.</td>
+          </tr>
+          <tr>
+            <td class="tech-code">M</td>
+            <td>Mental Prep</td>
+            <td>Psychological pause for decision making.</td>
+          </tr>
+          <tr>
+            <td class="tech-code">R</td>
+            <td>Response</td>
+            <td>System wait time (e.g., machine calibration).</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <section>
-      <h2>Task: Resetting an Over-Infusion Alarm</h2>
+      <h2>Computational Example: Reset Alarm</h2>
       <p>
-        An expert nurse needs to silence an alarm and reset the volume:
+        <strong>Scenario:</strong> A nurse must silence a "High Pressure" alarm and reset the flow rate.
       </p>
-      <ol>
-        <li>Mental prep to recognize alarm (<strong>M</strong>)</li>
-        <li>Reach for the "Silence" button (<strong>P</strong>)</li>
-        <li>Press the "Silence" button (<strong>K</strong>)</li>
-        <li>Position hand on the numeric dial (<strong>P</strong>)</li>
-        <li>Mental prep to remember code (<strong>M</strong>)</li>
-        <li>Enter '0' code (<strong>K</strong>)</li>
-      </ol>
-      <p><strong>Predicted Operator Sequence:</strong> M → P → K → P → M → K</p>
+
+      <div class="calc-box">
+        Task_Total = M + P + K + P + M + K<br>
+        <br>
+        1. Recognize Alarm (M)<br>
+        2. Reach for Silence (P)<br>
+        3. Press Silence (K)<br>
+        4. Reach for Reset (P)<br>
+        5. Verify Code (M)<br>
+        6. Press Reset (K)
+      </div>
+      
+      <p>
+        <strong>Analysis:</strong> By minimizing the number of <strong>H</strong> (Homing) and 
+        <strong>P</strong> (Pointing) operators, engineers can reduce the time-to-safety during emergencies.
+      </p>
     </section>
 
     <section>
-      <h2>Why use KLM for Medical Devices?</h2>
+      <h2>Model Limitations</h2>
       <p>
-        KLM ignores the <strong>Gulf of Evaluation</strong> (interpretation) because it assumes 
-        the expert knows the alarm sound. It is used to ensure that the physical 
-        <strong>Operators</strong> required to stop a dangerous situation are as few as possible.
+        KLM assumes an <strong>Expert User</strong> with <strong>Zero Errors</strong>. 
+        It does not account for the stress or confusion a nurse might feel during a Code Blue, 
+        which is why Norman's Gulf of Evaluation is also required.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Bisma Ahmed | Safety Performance Data</p>
+    <p>&copy; 2026 Bisma Ahmed | HCI Performance Metrics</p>
   </footer>
 
 </body>
