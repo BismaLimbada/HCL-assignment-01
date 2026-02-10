@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <title>Safety Analysis – Automatic Syringe Pump</title>
   <style>
-    /* Bisma's Medical Theme: Professional Blue */
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    .safety-correspondence { background-color: #e3f2fd; } /* Light medical blue */
-    .gulf-warning { color: #b71c1c; font-weight: bold; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; color: #1a3a52; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
+    thead { background-color: #1a3a52; color: white; }
+    .safety-row { background-color: #e3f2fd; }
+    .gulf-warning { color: #c9302c; }
+    footer { background-color: #1a3a52; color: white; }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Interaction Analysis</h1>
     <p>Safety Analysis of an Automatic Syringe Pump (Dix et al., Ch. 9 & 12)</p>
@@ -34,50 +40,49 @@
       <p>
         Analyzing the interaction steps required for a nurse to set a dosage on a standard medical pump. 
         This comparison highlights where <strong>GOMS</strong> predicts expert speed and where 
-        <strong>Norman’s Action Cycle</strong> identifies potential for life-threatening errors.
+        <strong>Norman's Action Cycle</strong> identifies potential for life-threatening errors.
       </p>
 
-      
       <table border="1">
-        <caption>In-depth Comparison: Norman’s 7 Stages vs. GOMS Framework</caption>
+        <caption>Norman's 7 Stages vs. GOMS Framework</caption>
         <thead>
           <tr>
             <th scope="col">Interaction Stage</th>
-            <th scope="col">Norman’s Action Cycle (Psychology)</th>
-            <th scope="col">GOMS Component (Execution)</th>
-            <th scope="col">Safety Risk / Analysis</th>
+            <th scope="col">Norman's Action Cycle</th>
+            <th scope="col">GOMS Component</th>
+            <th scope="col">Safety Risk</th>
           </tr>
         </thead>
         <tbody>
-          <tr class="safety-correspondence">
+          <tr class="safety-row">
             <th scope="row">Initial State</th>
             <td><strong>Goal:</strong> Intention to administer 10ml/hr.</td>
             <td><strong>Goal:</strong> SET-INFUSION-RATE.</td>
             <td>Errors here are high-level clinical mistakes.</td>
           </tr>
           <tr>
-            <th scope="row">Bridge 1</th>
-            <td><strong>Plan:</strong> Decide to use the "Rate" button followed by numeric keys.</td>
+            <th scope="row">Planning</th>
+            <td><strong>Plan:</strong> Decide to use "Rate" button and numeric keys.</td>
             <td><strong>Method:</strong> Keypad-Entry Method.</td>
             <td><span class="gulf-warning">Gulf of Execution:</span> Can the nurse find the "Rate" button?</td>
           </tr>
-          <tr class="safety-correspondence">
+          <tr class="safety-row">
             <th scope="row">Motor Action</th>
-            <td><strong>Specify &amp; Execute:</strong> Pressing [Rate], [1], [0], [Enter].</td>
+            <td><strong>Execute:</strong> Pressing [Rate], [1], [0], [Enter].</td>
             <td><strong>Operators:</strong> Press-Key(Rate), Press-Key(1), Press-Key(0).</td>
-            <td>GOMS predicts the exact physical time (KLM) for these actions.</td>
+            <td>GOMS predicts exact physical time using KLM.</td>
           </tr>
           <tr>
-            <th scope="row">Bridge 2</th>
-            <td><strong>Perceive &amp; Interpret:</strong> Seeing the 10ml/hr confirmation on the LCD.</td>
+            <th scope="row">Perceiving</th>
+            <td><strong>Perceive:</strong> Seeing the 10ml/hr confirmation on LCD.</td>
             <td><em>(Not Modeled in GOMS)</em></td>
-            <td><span class="gulf-warning">Gulf of Evaluation:</span> If the screen is dim, the nurse may miss a typo (e.g., 100ml/hr).</td>
+            <td><span class="gulf-warning">Gulf of Evaluation:</span> If screen is dim, nurse may miss error.</td>
           </tr>
-          <tr class="safety-correspondence">
-            <th scope="row">Final State</th>
-            <td><strong>Evaluate:</strong> Does the screen match the doctor's order?</td>
-            <td><strong>Selection Rule:</strong> If display is correct, start pump.</td>
-            <td>Critical check to prevent overdose before hitting "Start".</td>
+          <tr class="safety-row">
+            <th scope="row">Evaluation</th>
+            <td><strong>Evaluate:</strong> Does screen match doctor's order?</td>
+            <td><strong>Selection Rule:</strong> If correct, start pump.</td>
+            <td>Critical final check to prevent overdose.</td>
           </tr>
         </tbody>
       </table>
@@ -89,7 +94,7 @@
         As discussed in <strong>Dix et al., Chapter 12</strong>, hierarchical models like GOMS are 
         ideal for calculating the efficiency of repetitive tasks for expert users. However, 
         medical devices must be evaluated using <strong>Norman's Cycle</strong> because the most 
-        dangerous errors occur during <strong>Interpretation</strong> and <strong>Evaluation</strong>—the 
+        dangerous errors occur during <strong>Interpretation</strong> and <strong>Evaluation</strong> — 
         stages GOMS assumes will happen perfectly.
       </p>
     </section>
@@ -98,6 +103,5 @@
   <footer>
     <p>&copy; 2026 Bisma Ahmed | BSCS Karachi University</p>
   </footer>
-
 </body>
 </html>
