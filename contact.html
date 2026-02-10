@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact – Bisma Ahmed</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
+    footer { background-color: #1a3a52; color: white; }
+  </style>
 </head>
 <body>
-
   <header>
     <h1>Get in Touch</h1>
   </header>
@@ -25,13 +33,13 @@
     <form action="#" method="post">
       <fieldset>
         <legend>Safety Inquiry Form</legend>
-
+        
         <label for="user-email">Institutional Email</label><br>
-        <input type="email" id="user-email" name="user-email"><br><br>
-
+        <input type="email" id="user-email" name="user-email" required><br><br>
+        
         <label for="safety-query">Describe the Device Issue</label><br>
-        <textarea id="safety-query" name="safety-query" rows="6" cols="35"></textarea><br><br>
-
+        <textarea id="safety-query" name="safety-query" rows="6" cols="40" required></textarea><br><br>
+        
         <button type="submit">Submit Report</button>
       </fieldset>
     </form>
@@ -39,7 +47,7 @@
 
   <footer>
     <p>Accessibility compliance: Labels linked via ID and For attributes.</p>
+    <p>&copy; 2026 Bisma Ahmed | Karachi University</p>
   </footer>
-
 </body>
 </html>
