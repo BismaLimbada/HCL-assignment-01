@@ -4,25 +4,20 @@
   <meta charset="UTF-8">
   <title>KLM Computation – Bisma Ahmed</title>
   <style>
-    /* Bisma's "Technical Spec" Theme */
-    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; }
-    
-    /* Monospace for technical terms */
-    .tech-code { font-family: 'Courier New', monospace; font-weight: bold; color: #d63384; }
-    
-    /* Styling for the sequence box */
-    .calc-box { 
-      background-color: #f8f9fa; 
-      border: 1px solid #dee2e6; 
-      padding: 15px; 
-      border-radius: 4px;
-      margin: 20px 0;
-      font-family: 'Courier New', monospace;
-    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; color: #1a3a52; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
+    thead { background-color: #1a3a52; color: white; }
+    .operator-code { font-family: 'Courier New', monospace; color: #d63384; background-color: #f4f4f4; }
+    .calc-box { background-color: #f8f9fa; font-family: 'Courier New', monospace; }
+    footer { background-color: #1a3a52; color: white; }
   </style>
 </head>
 <body>
-
   <header>
     <h1>KLM Performance Prediction</h1>
     <p>Quantitative Analysis of Safety-Critical Hardware (Dix et al.)</p>
@@ -44,10 +39,8 @@
       <h2>Standard Operator Set (Dix et al.)</h2>
       <p>
         The Keystroke-Level Model reduces complex nurse-machine interactions into 
-        seven primitive physical and mental units.
+        primitive physical and mental units.
       </p>
-
-      
 
       <table border="1">
         <caption>KLM Primitive Operators</caption>
@@ -55,69 +48,74 @@
           <tr>
             <th scope="col">Symbol</th>
             <th scope="col">Operator Name</th>
+            <th scope="col">Time</th>
             <th scope="col">Description</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="tech-code">K</td>
+            <th scope="row" class="operator-code">K</th>
             <td>Keystroke</td>
-            <td>Striking a key (e.g., dosage number).</td>
+            <td>0.20 sec</td>
+            <td>Pressing a key or button.</td>
           </tr>
           <tr>
-            <td class="tech-code">B</td>
-            <td>Button Press</td>
-            <td>Pressing/releasing a mouse or joystick button.</td>
-          </tr>
-          <tr>
-            <td class="tech-code">P</td>
+            <th scope="row" class="operator-code">P</th>
             <td>Pointing</td>
-            <td>Moving a cursor to a target on screen.</td>
+            <td>1.10 sec</td>
+            <td>Moving cursor to a target.</td>
           </tr>
           <tr>
-            <td class="tech-code">H</td>
+            <th scope="row" class="operator-code">H</th>
             <td>Homing</td>
-            <td>Switching hands between controls (e.g., dial to screen).</td>
+            <td>0.40 sec</td>
+            <td>Switching hands between controls.</td>
           </tr>
           <tr>
-            <td class="tech-code">D</td>
-            <td>Drawing</td>
-            <td>Tracing a path on a grid.</td>
-          </tr>
-          <tr>
-            <td class="tech-code">M</td>
+            <th scope="row" class="operator-code">M</th>
             <td>Mental Prep</td>
-            <td>Psychological pause for decision making.</td>
+            <td>1.35 sec</td>
+            <td>Mental preparation/thinking time.</td>
           </tr>
           <tr>
-            <td class="tech-code">R</td>
+            <th scope="row" class="operator-code">R</th>
             <td>Response</td>
-            <td>System wait time (e.g., machine calibration).</td>
+            <td>Variable</td>
+            <td>System wait time (e.g., display update).</td>
           </tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>Computational Example: Reset Alarm</h2>
+      <h2>Computational Example: Setting Rate</h2>
       <p>
-        <strong>Scenario:</strong> A nurse must silence a "High Pressure" alarm and reset the flow rate.
+        <strong>Scenario:</strong> Nurse sets infusion rate to 10 ml/hr using numeric keypad.
       </p>
 
       <div class="calc-box">
-        Task_Total = M + P + K + P + M + K<br>
-        <br>
-        1. Recognize Alarm (M)<br>
-        2. Reach for Silence (P)<br>
-        3. Press Silence (K)<br>
-        4. Reach for Reset (P)<br>
-        5. Verify Code (M)<br>
-        6. Press Reset (K)
+        <p>Task Sequence:</p>
+        <p>
+          M - Mentally prepare to enter rate<br>
+          K - Press Rate button<br>
+          K - Press digit "1"<br>
+          K - Press digit "0"<br>
+          K - Press Enter<br>
+          R - Wait for display update (0.2s)
+        </p>
+        <p>
+          <strong>Time Calculation:</strong><br>
+          M = 1.35s<br>
+          K + K + K + K = 4 × 0.20s = 0.80s<br>
+          R = 0.20s<br>
+          ────────────<br>
+          <strong>Total Time = 2.35 seconds</strong>
+        </p>
       </div>
       
       <p>
-        <strong>Analysis:</strong> By minimizing the number of <strong>H</strong> (Homing) and 
-        <strong>P</strong> (Pointing) operators, engineers can reduce the time-to-safety during emergencies.
+        <strong>Analysis:</strong> KLM predicts an expert nurse can set the rate in approximately 
+        2.4 seconds with error-free performance.
       </p>
     </section>
 
@@ -125,8 +123,8 @@
       <h2>Model Limitations</h2>
       <p>
         KLM assumes an <strong>Expert User</strong> with <strong>Zero Errors</strong>. 
-        It does not account for the stress or confusion a nurse might feel during a Code Blue, 
-        which is why Norman's Gulf of Evaluation is also required.
+        It does not account for stress, confusion, or interpretation difficulties. 
+        This is why Norman's Gulf of Evaluation analysis is also required for medical devices.
       </p>
     </section>
   </main>
@@ -134,6 +132,5 @@
   <footer>
     <p>&copy; 2026 Bisma Ahmed | HCI Performance Metrics</p>
   </footer>
-
 </body>
 </html>
