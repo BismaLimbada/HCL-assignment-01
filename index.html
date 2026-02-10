@@ -4,29 +4,25 @@
   <meta charset="UTF-8">
   <title>HCI Foundations – Bisma Ahmed</title>
   <style>
-    /* Bisma's Theme: Professional Blue */
-    body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; }
-    
-    /* Unique styling for the topics section to differentiate from other projects */
-    dt {
-      font-weight: bold;
-      color: #004085; /* Dark blue text */
-      background-color: #e9ecef; /* Light gray background for the term */
-      padding: 5px;
-      margin-top: 10px;
-      border-left: 5px solid #004085; /* Blue accent bar */
-    }
-    dd {
-      margin-left: 20px;
-      margin-bottom: 15px;
+    body { 
+      font-family: 'Segoe UI', Arial, sans-serif; 
+      background-color: #f5f7fa;
       color: #333;
     }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; color: #1a3a52; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
+    .profile-box { background-color: #e3f2fd; }
+    dt { background-color: #e9ecef; color: #1a3a52; }
+    footer { background-color: #1a3a52; color: white; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>HCI: Interaction &amp; Performance</h1>
+    <h1>HCI: Interaction & Performance</h1>
     <p>Exploring Cognitive Models in Safety-Critical Systems</p>
   </header>
 
@@ -44,43 +40,58 @@
   <main>
     <section>
       <h2>Student Profile</h2>
-      <ul>
-        <li><strong>Name:</strong> Bisma </li>
-        <li><strong>Seat No.:</strong> B23110006022</li>
-      </ul>
+      <div class="profile-box">
+        <ul>
+          <li><strong>Name:</strong> Bisma Ahmed</li>
+          <li><strong>Seat No.:</strong> B23110006022</li>
+          <li><strong>Institution:</strong> Karachi University</li>
+          <li><strong>Program:</strong> BS Computer Science</li>
+        </ul>
+      </div>
     </section>
 
-    
     <section>
       <h2>Core Frameworks</h2>
       <p>
-        This project analyzes three fundamental models of Human-Computer Interaction as described in <strong>Dix et al. (Ch. 12)</strong>.
+        This project analyzes three fundamental models of Human-Computer Interaction as described in 
+        <strong>Dix et al., Human–Computer Interaction (Ch. 12)</strong>.
       </p>
 
       <dl>
         <dt>Norman's Stages of Action</dt>
         <dd>
-          A descriptive model that focuses on the psychology of the user. [cite_start]It is particularly useful for identifying the <strong>Gulf of Execution</strong> (the difficulty in figuring out how to use the device) and the <strong>Gulf of Evaluation</strong> (the difficulty in understanding if the device worked correctly)[cite: 20]. This model helps designers understand <em>why</em> errors occur, especially in safety-critical systems like medical devices.
+          A descriptive model focusing on user psychology. It identifies the <strong>Gulf of Execution</strong> 
+          (difficulty using the device) and <strong>Gulf of Evaluation</strong> (difficulty understanding 
+          feedback). This helps explain why errors occur in safety-critical systems.
         </dd>
 
         <dt>GOMS Analysis</dt>
         <dd>
-          A predictive model that describes the <strong>procedural knowledge</strong> required by a user to perform a task. [cite_start]It stands for <strong>Goals</strong> (what the user wants to achieve), <strong>Operators</strong> (basic actions), <strong>Methods</strong> (sequences of operators), and <strong>Selection Rules</strong> (logic for choosing between methods)[cite: 20]. [cite_start]GOMS is best used to model the efficiency of <strong>expert users</strong> performing routine tasks[cite: 20].
+          A predictive model describing user procedural knowledge. GOMS stands for <strong>Goals, Operators, 
+          Methods, and Selection Rules</strong>. It models expert users performing routine tasks efficiently.
         </dd>
 
         <dt>KLM Predictions</dt>
         <dd>
-          The <strong>Keystroke-Level Model (KLM)</strong> is a simplified, low-level version of GOMS. [cite_start]It provides a quantitative prediction of execution time by breaking down a task into primitive physical operators (like <strong>K</strong> for Keystroke, <strong>P</strong> for Pointing, and <strong>H</strong> for Homing)[cite: 20]. [cite_start]It assumes <strong>error-free performance</strong> and is used to compare the speed of different interface designs[cite: 20].
+          The <strong>Keystroke-Level Model</strong> predicts execution time using primitive operators 
+          like K (Keystroke), P (Pointing), and H (Homing). It assumes error-free performance and 
+          compares interface speeds.
         </dd>
       </dl>
+    </section>
+
+    <section>
+      <h2>Why These Models Matter</h2>
+      <p>
+        For medical devices like syringe pumps, GOMS and KLM predict expert speed but assume perfect 
+        performance. Norman's model reveals where errors occur during interpretation and evaluation. 
+        Combining all three models provides complete safety analysis.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Bisma Ahmed | HCI Lab 01</p>
+    <p>&copy; 2026 Bisma Ahmed | HCI Lab 01 | Karachi University BSCS</p>
   </footer>
-
 </body>
-
 </html>
-
