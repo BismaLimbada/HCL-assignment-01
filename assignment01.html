@@ -4,20 +4,26 @@
   <meta charset="UTF-8">
   <title>Lab Assignment 01 – Bisma Ahmed</title>
   <style>
-    /* Bisma's Theme: Minimal Blue and Light Gray */
-    body { font-family: 'Segoe UI', Arial, sans-serif; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; color: #1a3a52; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
     .rule-box { background-color: #e7f3ff; color: #003366; }
-    .note-box { background-color: #f8f9fa; border-left: 5px solid #0056b3; }
-    .warning  { color: #a30000; font-weight: bold; }
+    .note-box { background-color: #f8f9fa; }
+    .warning  { color: #a30000; }
+    thead { background-color: #1a3a52; color: white; }
+    footer { background-color: #1a3a52; color: white; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Lab Practice &amp; Assignment 01</h1>
+    <h1>Lab Practice & Assignment 01</h1>
     <p>
       Semantic HTML Foundations: Safety-Critical Systems Analysis
-      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 9 &amp; 12)
+      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 9 & 12)
     </p>
   </header>
 
@@ -48,14 +54,14 @@
         This assignment follows the strict constraints of Lab 01 to demonstrate mastery of HTML foundations:
       </p>
       <ul>
-        <li><strong>Semantic HTML:</strong> Use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
-        <li><strong>Accessibility:</strong> Proper use of <code>aria-current</code>, <code>alt</code> text, and <code>&lt;label for&gt;</code>.</li>
-        <li><strong>Minimal CSS:</strong> No layout or box-model properties (no margins, padding, or flexbox).</li>
+        <li><strong>Semantic HTML:</strong> Use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code></li>
+        <li><strong>Accessibility:</strong> Proper use of <code>aria-current</code>, <code>alt</code> text, and <code>&lt;label for&gt;</code></li>
+        <li><strong>Minimal CSS:</strong> Only color, background-color, font-family, font-size allowed</li>
       </ul>
     </section>
 
     <section>
-      <h2>Exam Preparation (Part A: Common Mistakes)</h2>
+      <h2>Common HTML Mistakes to Avoid</h2>
       <table border="1">
         <caption>Common HTML Mistakes vs. Correct Implementation</caption>
         <thead>
@@ -68,18 +74,18 @@
         <tbody>
           <tr>
             <th scope="row">Navigation</th>
-            <td>Placing <code>&lt;a&gt;</code> directly inside <code>&lt;ul&gt;</code>.</td>
-            <td>Nesting <code>&lt;a&gt;</code> inside <code>&lt;li&gt;</code> inside <code>&lt;ul&gt;</code>.</td>
+            <td>Placing <code>&lt;a&gt;</code> directly inside <code>&lt;ul&gt;</code></td>
+            <td>Nesting <code>&lt;a&gt;</code> inside <code>&lt;li&gt;</code> inside <code>&lt;ul&gt;</code></td>
           </tr>
           <tr>
             <th scope="row">Hierarchy</th>
-            <td>Skipping heading levels (e.g., H1 to H3).</td>
-            <td>Sequential headings (H1, H2, H3).</td>
+            <td>Skipping heading levels (e.g., H1 to H3)</td>
+            <td>Sequential headings (H1, H2, H3)</td>
           </tr>
           <tr>
             <th scope="row">Forms</th>
-            <td>Input fields without connected labels.</td>
-            <td>Using <code>for</code> attribute in label matching the input <code>id</code>.</td>
+            <td>Input fields without connected labels</td>
+            <td>Using <code>for</code> attribute matching input <code>id</code></td>
           </tr>
         </tbody>
       </table>
@@ -88,7 +94,9 @@
     <section class="note-box">
       <h2>Theoretical Knowledge</h2>
       <p>
-        The analysis conducted in this project proves that while <strong>GOMS</strong> and <strong>KLM</strong> are excellent for measuring expert speed, <strong>Norman's Action Cycle</strong> is essential for identifying safety risks (The Gulf of Evaluation) in medical hardware like automatic syringes.
+        This project demonstrates that while <strong>GOMS</strong> and <strong>KLM</strong> are excellent 
+        for measuring expert speed, <strong>Norman's Action Cycle</strong> is essential for identifying 
+        safety risks (the Gulf of Evaluation) in medical hardware like automatic syringes.
       </p>
     </section>
   </main>
@@ -96,6 +104,5 @@
   <footer>
     <p>&copy; 2026 Bisma Ahmed | Karachi University BSCS</p>
   </footer>
-
 </body>
 </html>
