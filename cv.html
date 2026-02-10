@@ -2,19 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HCI Competencies – Bisma Ahmed</title>
+  <title>CV – Bisma Ahmed</title>
   <style>
-    body { font-family: 'Verdana', sans-serif; line-height: 1.6; }
-    .model-container { background-color: #f0f7ff; }
-    .term-heading { color: #0056b3; font-weight: bold; }
-    blockquote { border-left: 4px solid #0056b3; background-color: #f9f9f9; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f5f7fa; color: #333; }
+    header { background-color: #1a3a52; color: white; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; color: #1a3a52; }
+    nav { background-color: #ffffff; }
+    nav a { color: #1a3a52; }
+    nav a[aria-current="page"] { color: #d4af37; background-color: #f0f0f0; }
+    dt { background-color: #e9ecef; color: #1a3a52; }
+    footer { background-color: #1a3a52; color: white; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>HCI Analytical Competencies</h1>
-    <p>Focus: Safety-Critical Medical Instrumentation (Dix et al.)</p>
+    <h1>HCI Knowledge Base</h1>
+    <p>Cognitive Models & Evaluation Techniques</p>
   </header>
 
   <nav aria-label="Primary navigation">
@@ -30,61 +34,67 @@
 
   <main>
     <section>
-      <h2>Phase 1: Cognitive Modeling (Norman's Cycle)</h2>
-      <p>Using the Seven Stages of Action to evaluate medical hardware feedback loops.</p>
+      <h2>Core Competencies</h2>
       
-      [Image of the Gulf of Execution and Gulf of Evaluation diagram]
+      <dl>
+        <dt>Norman's Action Cycle Analysis</dt>
+        <dd>
+          Can identify all seven stages: Goal, Intention, Specification, Execution, Perception, 
+          Interpretation, and Evaluation. Able to identify Gulf of Execution and Gulf of Evaluation 
+          in interface designs.
+        </dd>
 
-      <table border="1">
-        <caption>Mapping the 7 Stages to Syringe Pump Reset Task</caption>
-        <thead>
-          <tr>
-            <th scope="col">Stage Category</th>
-            <th scope="col">Execution &amp; Evaluation Steps</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Forming the Goal</th>
-            <td>Identify the need to stop a 10ml/hr infusion.</td>
-          </tr>
-          <tr>
-            <th scope="row">The Execution Bridge</th>
-            <td>Planning the press sequence and hitting the physical [STOP] button.</td>
-          </tr>
-          <tr>
-            <th scope="row">The Evaluation Bridge</th>
-            <td>Observing the 'Standby' LED and confirming the flow has ceased.</td>
-          </tr>
-        </tbody>
-      </table>
+        <dt>GOMS Modeling</dt>
+        <dd>
+          Can decompose tasks into Goals, Operators, Methods, and Selection Rules. Able to model 
+          expert user procedures and predict approximate completion times.
+        </dd>
+
+        <dt>KLM Time Prediction</dt>
+        <dd>
+          Can identify KLM operators (K, P, H, M, R) and calculate execution time predictions. 
+          Understands model assumes error-free expert performance.
+        </dd>
+
+        <dt>Safety-Critical System Evaluation</dt>
+        <dd>
+          Demonstrated ability to apply multiple models together for comprehensive analysis. 
+          Can use GOMS for efficiency and Norman for error identification.
+        </dd>
+      </dl>
     </section>
 
     <section>
-      <h2>Phase 2: Performance Prediction (GOMS)</h2>
-      <p>A decomposition of expert tasks into Goals, Operators, Methods, and Selection rules.</p>
+      <h2>Case Study: Medical Infusion Pump</h2>
+      <p>
+        Applied all three cognitive models to analyze a safety-critical medical device, identifying:
+      </p>
+      <ul>
+        <li>Execution time predictions using KLM (2.4 seconds for rate entry)</li>
+        <li>Expert workflow modeling using GOMS</li>
+        <li>Error sources using Norman's Gulf of Evaluation</li>
+        <li>Design recommendations for both speed and safety</li>
+      </ul>
+    </section>
 
-      [Image of GOMS model structure showing Goals, Operators, Methods, and Selection Rules]
-
-      <dl>
-        <dt class="term-heading">GOALS</dt>
-        <dd>High-level objectives such as <em>SET-DOSAGE</em> or <em>SILENCE-ALARM</em>.</dd>
-        
-        <dt class="term-heading">OPERATORS</dt>
-        <dd>The most basic motor or cognitive acts like <em>PRESS-KEY</em> or <em>READ-SCREEN</em>.</dd>
-        
-        <dt class="term-heading">METHODS</dt>
-        <dd>Learned procedures or sequences of operators used to accomplish a goal.</dd>
-        
-        <dt class="term-heading">SELECTION RULES</dt>
-        <dd>The logic used to choose a specific method when multiple options are available.</dd>
-      </dl>
+    <section>
+      <h2>Reference Materials</h2>
+      <p>
+        <strong>Core Textbook:</strong> Dix, A., Finlay, J., Abowd, G. D., & Beale, R. (2004). 
+        <em>Human-Computer Interaction</em> (3rd Edition). Pearson Education.
+      </p>
+      <p>
+        <strong>Chapters Covered:</strong>
+      </p>
+      <ul>
+        <li>Chapter 9: Evaluation Techniques</li>
+        <li>Chapter 12: Cognitive Models</li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Bisma Ahmed | Karachi University</p>
+    <p>&copy; 2026 Bisma Ahmed | Karachi University BSCS</p>
   </footer>
-
 </body>
 </html>
