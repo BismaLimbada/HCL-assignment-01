@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Assignment 01 – Bisma Ahmed</title>
+  <style>
+    /* Bisma's Theme: Minimal Blue and Light Gray */
+    body { font-family: 'Segoe UI', Arial, sans-serif; }
+    .rule-box { background-color: #e7f3ff; color: #003366; }
+    .note-box { background-color: #f8f9fa; border-left: 5px solid #0056b3; }
+    .warning  { color: #a30000; font-weight: bold; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lab Practice &amp; Assignment 01</h1>
+    <p>
+      Semantic HTML Foundations: Safety-Critical Systems Analysis
+      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 9 &amp; 12)
+    </p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="assignment01.html" aria-current="page">Lab 01 Rules</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Submission Information</h2>
+      <ul>
+        <li><strong>Student Name:</strong> Bisma Ahmed</li>
+        <li><strong>Seat Number:</strong> B23110006022</li>
+        <li><strong>Focus Area:</strong> Medical Device Usability (Automatic Syringe)</li>
+      </ul>
+    </section>
+
+    <section class="rule-box">
+      <h2>Project Constraints</h2>
+      <p>
+        This assignment follows the strict constraints of Lab 01 to demonstrate mastery of HTML foundations:
+      </p>
+      <ul>
+        <li><strong>Semantic HTML:</strong> Use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code>.</li>
+        <li><strong>Accessibility:</strong> Proper use of <code>aria-current</code>, <code>alt</code> text, and <code>&lt;label for&gt;</code>.</li>
+        <li><strong>Minimal CSS:</strong> No layout or box-model properties (no margins, padding, or flexbox).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Exam Preparation (Part A: Common Mistakes)</h2>
+      <table border="1">
+        <caption>Common HTML Mistakes vs. Correct Implementation</caption>
+        <thead>
+          <tr>
+            <th scope="col">Error Type</th>
+            <th scope="col">Incorrect Method</th>
+            <th scope="col">Correct Semantic Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Navigation</th>
+            <td>Placing <code>&lt;a&gt;</code> directly inside <code>&lt;ul&gt;</code>.</td>
+            <td>Nesting <code>&lt;a&gt;</code> inside <code>&lt;li&gt;</code> inside <code>&lt;ul&gt;</code>.</td>
+          </tr>
+          <tr>
+            <th scope="row">Hierarchy</th>
+            <td>Skipping heading levels (e.g., H1 to H3).</td>
+            <td>Sequential headings (H1, H2, H3).</td>
+          </tr>
+          <tr>
+            <th scope="row">Forms</th>
+            <td>Input fields without connected labels.</td>
+            <td>Using <code>for</code> attribute in label matching the input <code>id</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="note-box">
+      <h2>Theoretical Knowledge</h2>
+      <p>
+        The analysis conducted in this project proves that while <strong>GOMS</strong> and <strong>KLM</strong> are excellent for measuring expert speed, <strong>Norman's Action Cycle</strong> is essential for identifying safety risks (The Gulf of Evaluation) in medical hardware like automatic syringes.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bisma Ahmed | Karachi University BSCS</p>
+  </footer>
+
+</body>
+</html>

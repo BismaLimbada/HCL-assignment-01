@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HCI Competencies – Bisma Ahmed</title>
+  <style>
+    body { font-family: 'Verdana', sans-serif; line-height: 1.6; }
+    .model-container { background-color: #f0f7ff; }
+    .term-heading { color: #0056b3; font-weight: bold; }
+    blockquote { border-left: 4px solid #0056b3; background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>HCI Analytical Competencies</h1>
+    <p>Focus: Safety-Critical Medical Instrumentation (Dix et al.)</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html" aria-current="page">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Phase 1: Cognitive Modeling (Norman's Cycle)</h2>
+      <p>Using the Seven Stages of Action to evaluate medical hardware feedback loops.</p>
+      
+      [Image of the Gulf of Execution and Gulf of Evaluation diagram]
+
+      <table border="1">
+        <caption>Mapping the 7 Stages to Syringe Pump Reset Task</caption>
+        <thead>
+          <tr>
+            <th scope="col">Stage Category</th>
+            <th scope="col">Execution &amp; Evaluation Steps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Forming the Goal</th>
+            <td>Identify the need to stop a 10ml/hr infusion.</td>
+          </tr>
+          <tr>
+            <th scope="row">The Execution Bridge</th>
+            <td>Planning the press sequence and hitting the physical [STOP] button.</td>
+          </tr>
+          <tr>
+            <th scope="row">The Evaluation Bridge</th>
+            <td>Observing the 'Standby' LED and confirming the flow has ceased.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Phase 2: Performance Prediction (GOMS)</h2>
+      <p>A decomposition of expert tasks into Goals, Operators, Methods, and Selection rules.</p>
+
+      [Image of GOMS model structure showing Goals, Operators, Methods, and Selection Rules]
+
+      <dl>
+        <dt class="term-heading">GOALS</dt>
+        <dd>High-level objectives such as <em>SET-DOSAGE</em> or <em>SILENCE-ALARM</em>.</dd>
+        
+        <dt class="term-heading">OPERATORS</dt>
+        <dd>The most basic motor or cognitive acts like <em>PRESS-KEY</em> or <em>READ-SCREEN</em>.</dd>
+        
+        <dt class="term-heading">METHODS</dt>
+        <dd>Learned procedures or sequences of operators used to accomplish a goal.</dd>
+        
+        <dt class="term-heading">SELECTION RULES</dt>
+        <dd>The logic used to choose a specific method when multiple options are available.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bisma Ahmed | Karachi University</p>
+  </footer>
+
+</body>
+</html>

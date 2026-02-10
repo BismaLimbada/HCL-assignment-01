@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KLM Analysis – Medical Syringe</title>
+</head>
+<body>
+
+  <header>
+    <h1>KLM Performance Prediction</h1>
+    <p>Calculating execution time for safety-critical hardware.</p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="analysis.html">Interaction Analysis</a></li>
+      <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
+      <li><a href="assignment01.html">Lab 01 Rules</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>The Seven Primitive Operators</h2>
+      <p>
+        In medical device design, the Keystroke-Level Model (KLM) predicts if an expert (like a nurse) 
+        can respond to an alarm fast enough.
+      </p>
+      
+      
+
+      <ul>
+        <li><strong>K:</strong> Pressing a hardware button.</li>
+        <li><strong>B:</strong> Pressing a toggle switch.</li>
+        <li><strong>P:</strong> Reaching for a specific dial.</li>
+        <li><strong>H:</strong> Homing hands between the device and a notepad.</li>
+        <li><strong>D:</strong> Manual drawing/plotting on a chart.</li>
+        <li><strong>M:</strong> Mental preparation before a critical action.</li>
+        <li><strong>R:</strong> Machine calibration time.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Task: Resetting an Over-Infusion Alarm</h2>
+      <p>
+        An expert nurse needs to silence an alarm and reset the volume:
+      </p>
+      <ol>
+        <li>Mental prep to recognize alarm (<strong>M</strong>)</li>
+        <li>Reach for the "Silence" button (<strong>P</strong>)</li>
+        <li>Press the "Silence" button (<strong>K</strong>)</li>
+        <li>Position hand on the numeric dial (<strong>P</strong>)</li>
+        <li>Mental prep to remember code (<strong>M</strong>)</li>
+        <li>Enter '0' code (<strong>K</strong>)</li>
+      </ol>
+      <p><strong>Predicted Operator Sequence:</strong> M → P → K → P → M → K</p>
+    </section>
+
+    <section>
+      <h2>Why use KLM for Medical Devices?</h2>
+      <p>
+        KLM ignores the <strong>Gulf of Evaluation</strong> (interpretation) because it assumes 
+        the expert knows the alarm sound. It is used to ensure that the physical 
+        <strong>Operators</strong> required to stop a dangerous situation are as few as possible.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bisma Ahmed | Safety Performance Data</p>
+  </footer>
+
+</body>
+</html>
